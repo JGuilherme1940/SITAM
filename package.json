@@ -1,5 +1,5 @@
 {
-  "name": "sitam",
+  "name": "ata",
   "scripts": {
     "start":"npx serve . -l $PORT"
   }
