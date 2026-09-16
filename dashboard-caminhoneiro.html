@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel do caminhoneiro — SITAM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="side">
+    <a href="index.html" class="brand">
+      <span class="mark">SITAM</span>
+      <span class="full">TRANSPORTE</span>
+    </a>
+    <nav class="side-nav">
+      <a href="#" class="active">Fretes disponíveis</a>
+      <a href="#" id="linkAceitos">Meus fretes</a>
+      <a href="#">Histórico</a>
+      <a href="#">Configurações</a>
+      <a href="index.html">Sair</a>
+    </nav>
+    <div class="side-profile">
+      <div class="name">Carlos Eduardo Souza</div>
+      <div class="role mono">CARRETA · RJ E REGIÃO</div>
+      <div class="stars">★★★★☆ <span class="mono" style="color:#D9D4CB;">4.6 · 132 entregas</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Fretes disponíveis</h1>
+        <p>Cargas compatíveis com sua região e capacidade de veículo.</p>
+      </div>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><b>R$ 3.240</b><span>GANHOS ESTA SEMANA</span></div>
+      <div class="kpi"><b>7</b><span>FRETES ESTE MÊS</span></div>
+      <div class="kpi"><b>4.6</b><span>AVALIAÇÃO MÉDIA</span></div>
+      <div class="kpi"><b>3</b><span>FRETES DISPONÍVEIS</span></div>
+    </div>
+
+    <div class="card-list" id="listaFretes">
+      <!-- cards inseridos via JS -->
+    </div>
+
+    <div id="painelAceitos" style="display:none; margin-top: 48px;">
+      <div class="section-head" style="border-color: var(--ink); padding-bottom:14px; margin-bottom:24px;">
+        <h2 style="font-size:1.6rem;">Frete em andamento</h2>
+      </div>
+      <div class="load-card" style="grid-template-columns: 1fr;">
+        <div>
+          <span class="badge transito">EM TRÂNSITO</span>
+          <div class="route" style="margin-top:12px;">Duque de Caxias <span class="arrow">→</span> Volta Redonda</div>
+          <div class="tracker">
+            <div class="step done"><div class="dot"></div><div class="label">SOLICITADO</div></div>
+            <div class="step done"><div class="dot"></div><div class="label">ACEITO</div></div>
+            <div class="step active"><div class="dot"></div><div class="label">EM TRÂNSITO</div></div>
+            <div class="step"><div class="dot"></div><div class="label">ENTREGUE</div></div>
+          </div>
+          <button class="btn btn-primary" style="margin-top:20px;" id="btnEntregar">Marcar como entregue</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

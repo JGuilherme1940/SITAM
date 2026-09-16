@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel do cliente — SITAM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="side">
+    <a href="index.html" class="brand">
+      <span class="mark">SITAM</span>
+      <span class="full">TRANSPORTE</span>
+    </a>
+    <nav class="side-nav">
+      <a href="#" class="active">Solicitar transporte</a>
+      <a href="#">Meus pedidos</a>
+      <a href="#">Histórico</a>
+      <a href="#">Configurações</a>
+      <a href="index.html">Sair</a>
+    </nav>
+    <div class="side-profile">
+      <div class="name">Distribuidora Boa Safra Ltda.</div>
+      <div class="role mono">PESSOA JURÍDICA</div>
+      <div class="stars">★★★★★ <span class="mono" style="color:#D9D4CB;">12 pedidos feitos</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h1>Solicitar transporte</h1>
+        <p>Publique sua carga e veja caminhoneiros disponíveis na sua região.</p>
+      </div>
+    </div>
+
+    <div class="form-panel" style="margin-bottom:48px;">
+      <h2 style="font-size:1.4rem;">Nova solicitação de frete</h2>
+      <form id="fSolicitacao">
+        <div class="field-row">
+          <div class="field-group">
+            <label>Origem</label>
+            <input type="text" required placeholder="Cidade / endereço de retirada">
+          </div>
+          <div class="field-group">
+            <label>Destino</label>
+            <input type="text" required placeholder="Cidade / endereço de entrega">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Tipo de carga</label>
+            <select required>
+              <option value="">Selecione</option>
+              <option>Alimentos e insumos</option>
+              <option>Materiais de construção</option>
+              <option>Móveis e eletrodomésticos</option>
+              <option>Encomendas e documentos</option>
+              <option>Máquinas e equipamentos</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Peso estimado (kg)</label>
+            <input type="number" id="pesoCarga" required placeholder="Ex: 500">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Valor estimado do frete</label>
+          <input type="text" id="valorEstimado" disabled placeholder="Calculado a partir do peso e distância">
+          <div class="hint">Estimativa automática: R$ 4,20 por km + R$ 0,35 por kg (distância simulada de 90 km).</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Publicar solicitação</button>
+      </form>
+    </div>
+
+    <div class="section-head">
+      <h2 style="font-size:1.4rem;">Caminhoneiros disponíveis na sua região</h2>
+      <span class="idx mono">3 ENCONTRADOS</span>
+    </div>
+
+    <div class="card-list" id="listaCaminhoneiros"></div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <h2 style="font-size:1.4rem;">Meus pedidos</h2>
+    </div>
+
+    <div class="load-card" style="grid-template-columns: 1fr;">
+      <div>
+        <span class="badge transito">EM TRÂNSITO</span>
+        <div class="route" style="margin-top:12px;">Duque de Caxias <span class="arrow">→</span> Volta Redonda</div>
+        <div class="meta-row">
+          <div class="meta-item">Caminhoneiro: <b>Carlos Eduardo Souza</b></div>
+          <div class="meta-item">Veículo: <b>Carreta</b></div>
+        </div>
+        <div class="tracker">
+          <div class="step done"><div class="dot"></div><div class="label">SOLICITADO</div></div>
+          <div class="step done"><div class="dot"></div><div class="label">ACEITO</div></div>
+          <div class="step active"><div class="dot"></div><div class="label">EM TRÂNSITO</div></div>
+          <div class="step"><div class="dot"></div><div class="label">ENTREGUE</div></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
